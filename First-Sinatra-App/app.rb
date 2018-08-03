@@ -40,22 +40,33 @@ get '/' do
     [200, {"Content-Type" => "text/html"}, "Hola mundo"]
 end
 
+get '/form' do
+  erb :form
+end 
 
-#Calcule el area de un cuadrado
-get '/parameters' do
-    "El area del rectangulo es #{params[:base].to_i * params[:altura].to_i}"
-end
+post '/hello-from-form' do
+  name=params[:name]
+  "Hola #{name}"
+end 
 
-post '/make-a-post' do
-    [200, {"Content-Type" => "text/html"}, "Acabas de hacer un post"]
-end
 
-put '/make-a-put' do
-    [200, {"Content-Type" => "text/html"}, "Acabas de hacer un put"]
-end
+# #Calcule el area de un cuadrado
+# get '/parameters' do
+#     "El area del rectangulo es #{params[:base].to_i * params[:altura].to_i}"
+# end
 
-delete '/make-a-delete' do
-    [200, {"Content-Type" => "text/html"}, "Acabas de hacer un delete"]
-end
+
+
+# post '/make-a-post' do
+#     [200, {"Content-Type" => "text/html"}, "Acabas de hacer un post"]
+# end
+
+# put '/make-a-put' do
+#     [200, {"Content-Type" => "text/html"}, "Acabas de hacer un put"]
+# end
+
+# delete '/make-a-delete' do
+#     [200, {"Content-Type" => "text/html"}, "Acabas de hacer un delete"]
+# end
 
 # HTTParty.put('http://localhost:4567/make-a-put', :headers => {"Content-Type" => "application/json"})
