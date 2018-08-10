@@ -1,36 +1,55 @@
-<!-- En la app sinatra crear un formulario que reciba: Nombre, apellido, edad, email, dirección, genero y 
-redirigirlo a una vista donde muestre toda esta información de forma ordenada, utilicen bootstrap en todos 
+<!-- En la app sinatra crear un formulario que reciba: Nombre, apellido, edad, email, dirección, genero y
+redirigirlo a una vista donde muestre toda esta información de forma ordenada, utilicen bootstrap en todos
 los elementos, agregando un header en el layout. -->
-<h1>Form</h1>
-<form action="/form-return" method="post">
-    <div>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name">
-    </div>
-    
-    <div>
-    <label for="surname">Surname</label>
-    <input type="text" id="surname" name="surname">
-    </div>
-    
-    <div>
-        <label for="age">Age</label>
-        <input type="number" id="age" name="age">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">Sing up m8!</div>
+        <div class="panel-body">
+          <form action="/home" method="post">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
 
-    </div>    
-    <div>
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email">
+            <div class="form-group">
+              <label for="surname">Surname</label>
+              <input type="text" class="form-control" id="surname" name="surname" required>
+            </div>
+
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+              <small id="passwordHelp" class="form-text text-muted">Make sure it has at least 8 characters.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="confpassword">Comfirm password</label>
+              <input type="password" class="form-control" id="confpassword" name="confpassword" required>
+            </div>
+
+            <div class="form-group form-check">
+              <label class="form-check-label" for="exampleCheck1">Gender</label>
+              <input type="checkbox" class="form-check-input" id="gender" name="gender"> Masculino
+              <input type="checkbox" class="form-check-input" id="gender" name="gender"> Femenino
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
-    
-    <div>
-        <label for="address">Your address</label>
-        <input type="text" id="address" name="address">
-    </div>
-    <div>
-        <label for="gender">Gender</label>
-        <input type="checkbox" id="gender" name="gender">Masculino
-        <input type="checkbox" id="gender" name="gender">Femenino
-    </div>
-    <button>Enviar</button>
-</form>
+  </div>
+</div>

@@ -1,17 +1,9 @@
-<h2>All Posts</h2>
-<ul>
-<% @posts.each do |post|   %>
-    <li>
-        <a href="/post/<%= post.id %>"><%= post.title%></a> | <%= post.created_at%>
-    </li>
-<%end%>
-</ul>
+<img class="banner_home" src="https://flickrtheblog.files.wordpress.com/2018/05/zh_alt_featured_image1.png">
+<div class="container">
+<div class="jumbotron-fluid">
+    <h1 class="display-4">Welcome <%= @name %> <%= @surname %>! </h1>
+    <p class="lead">You're now part of our amazing team, we hope you have fun here! Go ahead and check our gallery to see what's new!!</p>
 
-<h2>Add Post</h2>
-<form action="/post" method="post">
-    <label for="title">Title: </label>
-    <input type="text" name="title">
-    <label for="boyd">Body: </label>
-    <input type="text" name="body">
-    <input type="submit" value="Add Post">
-</form>
+    <a class="btn btn-primary btn-lg" role="button" href="/gallery">See more</a>
+  </div>
+</div>
