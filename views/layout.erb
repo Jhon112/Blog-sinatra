@@ -4,20 +4,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
   crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" type="text/css" href="gallery.css"> -->
+  <!-- <link rel="stylesheet" href="public/gallery.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>PhotoGallery!</title>
 
-<style media="screen">
-  .banner_home {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+  <style media="screen">
 
-  body {
+  .container-form {
     padding-top: 70px;
     }
 
@@ -29,18 +26,39 @@
       color: #f4f6ff;
     }
 
-    img.banner_home {
-      padding-top: 0px;
+    #content {
+      text-align: center;
+      padding-top: 25%;
+      font-family: 'Merriweather', serif;
+      text-shadow:  0px 4px 3px rgba(0,0,0,0.4),
+                    0px 8px 13px rgba(0,0,0,0.1),
+                    0px 18px 23px rgba(0,0,0,0.1);
     }
-</style>
 
+    #content h1, #content p {
+      color: white;
+    }
 
+    #content h1 {
+      font-size: 3em
+    }
+
+    html {
+      height: 100%;
+    }
+    
+      body {
+      background-image: url("https://images.unsplash.com/photo-1519908445142-d7cca1b45a4a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=35369b48b3596c35355dc7b895efaac5&auto=format&fit=crop&w=1500&q=80");
+      background-size: covered;
+      background-position: center;
+    }
+  </style>
 
 </head>
 
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
+      <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
           aria-expanded="false">
